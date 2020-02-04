@@ -16,7 +16,7 @@ namespace SleepData
             string resp = Console.ReadLine();
 
             // specify path for data file
-            string file = AppDomain.CurrentDomain.BaseDirectory + "data.text";
+            string file = AppDomain.CurrentDomain.BaseDirectory + "data.txt";
 
             if (resp == "1")
             {
@@ -59,7 +59,14 @@ namespace SleepData
             }
             else if (resp == "2")
             {
-                // TODO: parse data file
+                StreamReader sr = new StreamReader(file);
+                while (!sr.EndOfStream)
+                {
+                    string line = sr.ReadLine();
+                    // convert string to array
+                    string[] arr = line.Split(',');
+                    // display array data
+                    Console.WriteLine
 
             }
         }
